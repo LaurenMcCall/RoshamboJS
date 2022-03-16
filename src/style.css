@@ -11,7 +11,7 @@ body {
   font-size: large;
   margin: 0;
   min-height: 100%;
-  background-image: url(/image/swimmers.jpeg);
+  background-image: url(/images/hogwarts.jpeg);
   /* background: url("image/swimmers.jpeg") auto 749px; */
   background-color: #0c1245;
   background-position: center;
@@ -37,11 +37,12 @@ main {
 section {
   min-width: 18rem;
   min-height: 14rem;
-  border: solid #623e79;
+  border: thin solid yellow;
+  font-size: larger;
   letter-spacing: 1.75px;
   border-radius: 0.3rem;
   margin-bottom: 3rem;
-  background-color: rgb(70, 21, 120);
+  background-color: #4c2167;
 
   display: flex;
   flex-direction: column;
@@ -64,6 +65,9 @@ fieldset {
   padding-right: 0;
   border: none;
 }
+.opacity {
+  opacity: 0.9;
+}
 
 fieldset input {
   padding: 0.5rem;
@@ -80,6 +84,11 @@ fieldset i.rock {
       16 0,
     auto; /*!emojicursor.app*/
 }
+.rock:hover {
+  color: yellow;
+  font-size: 55px;
+  margin: 0;
+}
 
 fieldset i.paper {
   color: #ffffff;
@@ -87,11 +96,21 @@ fieldset i.paper {
       16 0,
     auto; /*!emojicursor.app*/
 }
+.paper:hover {
+  color: yellow;
+  font-size: 55px;
+  margin: 0;
+}
 fieldset i.scissors {
   color: #ffffff;
   cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🪄</text></svg>")
       16 0,
     auto; /*!emojicursor.app*/
+}
+.scissors:hover {
+  color: yellow;
+  font-size: 55px;
+  margin: 0;
 }
 aside {
   display: flex;
@@ -106,16 +125,20 @@ div {
   align-items: center;
   padding: 3px;
   min-width: 8rem;
-  border: solid #623e79;
-  border-radius: 0.3rem;
-  background-color: rgb(70, 21, 120);
-  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>💥</text></svg>")
+  border: thin solid yellow;
+  border-radius: 0.2rem;
+  background-color: #4c2167;
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🪄</text></svg>")
       16 0,
     auto; /*!emojicursor.app*/
 }
 
+.reset:hover {
+  color: yellow;
+  font-size: 35px;
+}
 .stroke-text {
   color: #ffffff;
-  text-shadow: -8px -1px 2px #623e79, 1px 1px 2px #623e79, 1px -1px 0 #623e79,
-    -1px -1px 0 #623e79;
+  text-shadow: -8px -1px 2px #4c2167, 1px 1px 1px yellow, 1px 1px 0px yellow,
+    -1px -1px 5px yellow;
 }
