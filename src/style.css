@@ -87,7 +87,7 @@ fieldset i.rock {
 }
 .rock:hover {
   color: yellow;
-  font-size: 55px;
+  font-size: 60px;
   margin: 0;
 }
 
@@ -99,7 +99,7 @@ fieldset i.paper {
 }
 .paper:hover {
   color: yellow;
-  font-size: 55px;
+  font-size: 60px;
   margin: 0;
 }
 fieldset i.scissors {
@@ -110,7 +110,7 @@ fieldset i.scissors {
 }
 .scissors:hover {
   color: yellow;
-  font-size: 55px;
+  font-size: 60px;
   margin: 0;
 }
 aside {
