@@ -1,0 +1,25 @@
+{
+  "name": "html-css-ts-project-template",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "start": "vite",
+    "predeploy": "npm run build",
+    "deploy": "netlify deploy --prod --dir=dist",
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true,
+    "useTabs": false
+  },
+  "devDependencies": {
+    "typescript": "^4.5.5",
+    "vite": "^2.8.4",
+    "vite-plugin-checker": "^0.4.2"
+  }
+}
