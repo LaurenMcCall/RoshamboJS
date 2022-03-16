@@ -25,7 +25,14 @@ h1 {
   letter-spacing: 8px;
   font-family: 'Mystery Quest', cursive;
   font-size: 90px;
-  margin: 2rem 0 3rem 0;
+  margin: 2rem 0 0rem 0;
+}
+h3 {
+  text-align: center;
+  letter-spacing: 5px;
+  font-family: 'Mystery Quest', cursive;
+  font-size: 30px;
+  margin: 0rem 0 5rem 0;
 }
 
 main {
@@ -53,12 +60,6 @@ section h2,
 section p {
   text-align: center;
 }
-
-/* section h3 {
-  margin: 1rem 0;
-  font-family: Monospace;
-  font-size: 3rem;
-} */
 
 fieldset {
   padding-left: 0;
@@ -140,5 +141,10 @@ div {
 .stroke-text {
   color: #ffffff;
   text-shadow: -8px -1px 2px #4c2167, 1px 1px 1px yellow, 1px 1px 0px yellow,
-    -1px -1px 5px yellow;
+    -1px -1px 8px yellow;
+}
+.stroke-text-h3 {
+  color: #ffffff;
+  text-shadow: -6px -1px 2px #4c2167, 0px 0px 0px yellow, 0px 0px 0px yellow,
+    0px 0px 8px yellow;
 }
