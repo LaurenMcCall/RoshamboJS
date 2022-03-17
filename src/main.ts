@@ -12,7 +12,7 @@ const playerTwoRock = document.querySelector('.player2 i.rock')
 const playerTwoPaper = document.querySelector('.player2 i.paper')
 const playerTwoScissors = document.querySelector('.player2 i.scissors')
 
-const displayWinner = document.querySelector('h1')
+const displayWinner = document.querySelector('header h2')
 
 let playerOneChoice: string
 let playerTwoChoice: string
@@ -73,7 +73,7 @@ playerTwoScissors?.addEventListener('click', clickOnScissorsPlayerTwo)
 // Display winner
 function returnWinner() {
   if (playerOneChoice === playerTwoChoice) {
-    result = "✨It's a draw! Prepare your wands to duel again!✨"
+    result = "✨ It's a draw❕ Prepare your wands to duel again❕✨"
   }
   if (playerOneChoice === 'rock' && playerTwoChoice === 'scissors') {
     result = '✨Witch 1 wins!✨'
@@ -95,3 +95,13 @@ function returnWinner() {
   }
   displayWinner!.innerHTML = result
 }
+
+// Reset button
+const resetButton = document.querySelector('aside div')
+
+function clickOnResetButton() {
+  if (displayWinner) {
+    displayWinner!.innerHTML = "Everyone's wand at the ready?"
+  }
+}
+resetButton?.addEventListener('click', clickOnResetButton)
