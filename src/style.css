@@ -40,7 +40,14 @@ header h2 {
   text-align: center;
   letter-spacing: 4px;
   font-family: 'Mystery Quest', cursive;
-  font-size: 50px;
+  font-size: 60px;
+  margin: 0rem 0 0.5rem 0;
+}
+header h5 {
+  text-align: center;
+  letter-spacing: 4px;
+  font-family: 'Mystery Quest', cursive;
+  font-size: 35px;
   margin: 0rem 0 5rem 0;
 }
 
@@ -96,6 +103,7 @@ fieldset i.rock {
 }
 .rock:hover {
   color: yellow;
+  text-shadow: 0 0 160px yellow;
   font-size: 60px;
   margin: 0;
 }
@@ -108,6 +116,7 @@ fieldset i.paper {
 }
 .paper:hover {
   color: yellow;
+  text-shadow: 0 0 110px yellow;
   font-size: 60px;
   margin: 0;
 }
@@ -119,6 +128,31 @@ fieldset i.scissors {
 }
 .scissors:hover {
   color: yellow;
+  text-shadow: 0 0 110px yellow;
+  font-size: 60px;
+  margin: 0;
+}
+fieldset i.lizard {
+  color: #ffffff;
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🪄</text></svg>")
+      16 0,
+    auto; /*!emojicursor.app*/
+}
+.lizard:hover {
+  color: yellow;
+  text-shadow: 0 0 110px yellow;
+  font-size: 60px;
+  margin: 0;
+}
+fieldset i.spock {
+  color: #ffffff;
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🪄</text></svg>")
+      16 0,
+    auto; /*!emojicursor.app*/
+}
+.spock:hover {
+  color: yellow;
+  text-shadow: 0 0 110px yellow;
   font-size: 60px;
   margin: 0;
 }
@@ -144,8 +178,11 @@ div {
 }
 
 .reset:hover {
-  color: yellow;
+  /* color: yellow; */
+  text-shadow: -6px -1px 2px #4c2167, 0px 0px 0px yellow, 0px 0px 0px yellow,
+    -1px -1px 4px yellow;
   font-size: 35px;
+  box-shadow: 0 0 110px yellow;
 }
 .stroke-text {
   color: #ffffff;
@@ -161,6 +198,11 @@ div {
   color: #ffffff;
   text-shadow: -6px -1px 2px #4c2167, 0px 0px 0px yellow, 0px 0px 0px yellow,
     0px 0px 8px yellow;
+}
+.stroke-text-h5 {
+  color: #ffffff;
+  text-shadow: -6px -1px 2px #4c2167, 0px 0px 0px yellow, 0px 0px 0px yellow,
+    -1px -1px 4.5px yellow;
 }
 /* footer {
   position: sticky;

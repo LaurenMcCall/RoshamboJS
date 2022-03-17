@@ -6,17 +6,23 @@ console.clear()
 const playerOneRock = document.querySelector('.player1 i.rock')
 const playerOnePaper = document.querySelector('.player1 i.paper')
 const playerOneScissors = document.querySelector('.player1 i.scissors')
+const playerOneLizard = document.querySelector('.player1 i.lizard')
+const playerOneSpock = document.querySelector('.player1 i.spock')
 
 // Player two selects throw
 const playerTwoRock = document.querySelector('.player2 i.rock')
 const playerTwoPaper = document.querySelector('.player2 i.paper')
 const playerTwoScissors = document.querySelector('.player2 i.scissors')
+const playerTwoLizard = document.querySelector('.player2 i.lizard')
+const playerTwoSpock = document.querySelector('.player2 i.spock')
 
 const displayWinner = document.querySelector('header h2')
+const displayWhyWinner = document.querySelector('header h5')
 
 let playerOneChoice: string
 let playerTwoChoice: string
 let result: string
+let resultExplanation: string
 
 // Functions for clicking on rock, paper, or scissors
 function clickOnRockPlayerOne() {
@@ -46,6 +52,23 @@ function clickOnScissorsPlayerOne() {
 }
 playerOneScissors?.addEventListener('click', clickOnScissorsPlayerOne)
 
+// Added player one lizard and spock
+function clickOnLizardPlayerOne() {
+  playerOneChoice = 'lizard'
+  console.log(playerOneChoice)
+  // returnWinner()
+  // console.log(returnWinner)
+}
+playerOneLizard?.addEventListener('click', clickOnLizardPlayerOne)
+
+function clickOnSpockPlayerOne() {
+  playerOneChoice = 'spock'
+  console.log(playerOneChoice)
+  // returnWinner()
+  // console.log(returnWinner)
+}
+playerOneSpock?.addEventListener('click', clickOnSpockPlayerOne)
+
 function clickOnRockPlayerTwo() {
   playerTwoChoice = 'rock'
   console.log(playerTwoChoice)
@@ -70,30 +93,112 @@ function clickOnScissorsPlayerTwo() {
 }
 playerTwoScissors?.addEventListener('click', clickOnScissorsPlayerTwo)
 
+// Added player two lizard and spock
+function clickOnLizardPlayerTwo() {
+  playerTwoChoice = 'lizard'
+  console.log(playerTwoChoice)
+  returnWinner()
+  console.log(returnWinner)
+}
+playerTwoLizard?.addEventListener('click', clickOnLizardPlayerTwo)
+
+function clickOnSpockPlayerTwo() {
+  playerTwoChoice = 'spock'
+  console.log(playerTwoChoice)
+  returnWinner()
+  console.log(returnWinner)
+}
+playerTwoSpock?.addEventListener('click', clickOnSpockPlayerTwo)
+
 // Display winner
 function returnWinner() {
   if (playerOneChoice === playerTwoChoice) {
     result = "✨ It's a draw❕ Prepare your wands to duel again❕✨"
+    resultExplanation = ''
   }
   if (playerOneChoice === 'rock' && playerTwoChoice === 'scissors') {
-    result = '✨Witch 1 wins!✨'
+    result = '✨ Witch 1 wins❕✨'
+    // '✨ Witch 1 wins❕✨ </br><span style="font-size: 30px;">Rock crushes Scissors</span> '
+    resultExplanation = 'Rock crushes Scissors'
   }
   if (playerOneChoice === 'rock' && playerTwoChoice === 'paper') {
-    result = '✨Witch 2 wins!✨'
+    result = '✨ Witch 2 wins❕✨'
+    resultExplanation = 'Paper covers Rock'
+  }
+  if (playerOneChoice === 'rock' && playerTwoChoice === 'lizard') {
+    result = '✨ Witch 1 wins❕✨'
+    resultExplanation = 'Rock crushes Lizard'
+  }
+  if (playerOneChoice === 'rock' && playerTwoChoice === 'spock') {
+    result = '✨ Witch 2 wins❕✨'
+    resultExplanation = 'Spock vaporizes Rock'
   }
   if (playerOneChoice === 'paper' && playerTwoChoice === 'rock') {
-    result = '✨Witch 1 wins!✨'
+    result = '✨ Witch 1 wins❕✨'
+    resultExplanation = 'Paper covers Rock'
   }
   if (playerOneChoice === 'paper' && playerTwoChoice === 'scissors') {
-    result = '✨Witch 2 wins!✨'
+    result = '✨ Witch 2 wins❕✨'
+    resultExplanation = 'Scissors cut Paper'
+  }
+  if (playerOneChoice === 'paper' && playerTwoChoice === 'lizard') {
+    result = '✨ Witch 2 wins❕✨'
+    resultExplanation = 'Lizard eats Paper'
+  }
+  if (playerOneChoice === 'paper' && playerTwoChoice === 'spock') {
+    result = '✨ Witch 1 wins❕✨'
+    resultExplanation = 'Paper disproves Spock'
   }
   if (playerOneChoice === 'scissors' && playerTwoChoice === 'rock') {
-    result = '✨Witch 2 wins!✨'
+    result = '✨ Witch 2 wins❕✨'
+    resultExplanation = 'Rock crushes Scissors'
   }
   if (playerOneChoice === 'scissors' && playerTwoChoice === 'paper') {
-    result = '✨Witch 1 wins!✨'
+    result = '✨ Witch 1 wins❕✨'
+    resultExplanation = 'Scissors cut Paper'
+  }
+  if (playerOneChoice === 'scissors' && playerTwoChoice === 'lizard') {
+    result = '✨ Witch 1 wins❕✨'
+    resultExplanation = 'Scissors decapitate Lizard'
+  }
+  if (playerOneChoice === 'scissors' && playerTwoChoice === 'spock') {
+    result = '✨ Witch 2 wins❕✨'
+    resultExplanation = 'Spock smashes Scissors'
+  }
+  if (playerOneChoice === 'lizard' && playerTwoChoice === 'rock') {
+    result = '✨ Witch 2 wins❕✨'
+    resultExplanation = 'Rock cruses Lizard'
+  }
+  if (playerOneChoice === 'lizard' && playerTwoChoice === 'paper') {
+    result = '✨ Witch 1 wins❕✨'
+    resultExplanation = 'Lizard eats Paper'
+  }
+  if (playerOneChoice === 'lizard' && playerTwoChoice === 'scissors') {
+    result = '✨ Witch 2 wins❕✨'
+    resultExplanation = 'Scissors decapitate Lizard'
+  }
+  if (playerOneChoice === 'lizard' && playerTwoChoice === 'spock') {
+    result = '✨ Witch 1 wins❕✨'
+    resultExplanation = 'Lizard poisons Spock'
+  }
+  if (playerOneChoice === 'spock' && playerTwoChoice === 'rock') {
+    result = '✨ Witch 1 wins❕✨'
+    resultExplanation = 'Spock vaporizes Rock'
+  }
+  if (playerOneChoice === 'spock' && playerTwoChoice === 'paper') {
+    result = '✨ Witch 2 wins❕✨'
+    resultExplanation = 'Paper disproves Spock'
+  }
+  if (playerOneChoice === 'spock' && playerTwoChoice === 'scissors') {
+    result = '✨ Witch 1 wins❕✨'
+    resultExplanation = 'Spock smashes Scissors'
+  }
+  if (playerOneChoice === 'spock' && playerTwoChoice === 'lizard') {
+    result = '✨ Witch 2 wins❕✨'
+    resultExplanation = 'Lizard poisons Spock'
   }
   displayWinner!.innerHTML = result
+  displayWhyWinner!.innerHTML = resultExplanation
 }
 
 // Reset button
@@ -102,6 +207,9 @@ const resetButton = document.querySelector('aside div')
 function clickOnResetButton() {
   if (displayWinner) {
     displayWinner!.innerHTML = "Everyone's wand at the ready?"
+  }
+  if (displayWhyWinner) {
+    displayWhyWinner!.innerHTML = ''
   }
 }
 resetButton?.addEventListener('click', clickOnResetButton)
