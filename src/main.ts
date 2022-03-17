@@ -19,6 +19,8 @@ const playerTwoSpock = document.querySelector('.player2 i.spock')
 const displayWinner = document.querySelector('header h2')
 const displayWhyWinner = document.querySelector('header h5')
 
+const fireworks = document.querySelector('header div')
+
 let playerOneChoice: string
 let playerTwoChoice: string
 let result: string
@@ -115,10 +117,12 @@ function returnWinner() {
   if (playerOneChoice === playerTwoChoice) {
     result = "✨ It's a draw❕ Prepare your wands to duel again❕✨"
     resultExplanation = ''
+    displayWinner!.innerHTML = result
+    displayWhyWinner!.innerHTML = resultExplanation
+    return
   }
   if (playerOneChoice === 'rock' && playerTwoChoice === 'scissors') {
     result = '✨ Witch 1 wins❕✨'
-    // '✨ Witch 1 wins❕✨ </br><span style="font-size: 30px;">Rock crushes Scissors</span> '
     resultExplanation = 'Rock crushes Scissors'
   }
   if (playerOneChoice === 'rock' && playerTwoChoice === 'paper') {
@@ -199,6 +203,7 @@ function returnWinner() {
   }
   displayWinner!.innerHTML = result
   displayWhyWinner!.innerHTML = resultExplanation
+  document.getElementById('fireworks')!.classList.remove('hide-fireworks')
 }
 
 // Reset button
@@ -211,5 +216,8 @@ function clickOnResetButton() {
   if (displayWhyWinner) {
     displayWhyWinner!.innerHTML = ''
   }
+  document.getElementById('fireworks')!.classList.add('hide-fireworks')
 }
 resetButton?.addEventListener('click', clickOnResetButton)
+
+// Fireworks
