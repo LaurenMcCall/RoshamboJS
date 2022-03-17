@@ -34,6 +34,13 @@ h3 {
   font-size: 30px;
   margin: 0rem 0 5rem 0;
 }
+header h2 {
+  text-align: center;
+  letter-spacing: 4px;
+  font-family: 'Mystery Quest', cursive;
+  font-size: 43px;
+  margin: 0rem 0 5rem 0;
+}
 
 main {
   display: flex;
@@ -142,6 +149,11 @@ div {
   color: #ffffff;
   text-shadow: -8px -1px 2px #4c2167, 1px 1px 1px yellow, 1px 1px 0px yellow,
     -1px -1px 8px yellow;
+}
+.stroke-text-h2 {
+  color: #ffffff;
+  text-shadow: -7px -1px 5px #4c2167, 1px 1px 1px yellow, 1px 1px 0px yellow,
+    -1px -1px 4px yellow;
 }
 .stroke-text-h3 {
   color: #ffffff;
