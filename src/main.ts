@@ -19,7 +19,7 @@ const playerTwoSpock = document.querySelector('.player2 i.spock')
 const displayWinner = document.querySelector('header h2')
 const displayWhyWinner = document.querySelector('header h5')
 
-const fireworks = document.querySelector('header div')
+// const fireworks = document.querySelector('header div')
 
 let playerOneChoice: string
 let playerTwoChoice: string
